@@ -156,14 +156,20 @@ class ViewController: UIViewController {
 	func setupChooseArticleDropDown() {
 		chooseArticleDropDown.anchorView = chooseArticleButton
 		
+        chooseArticleDropDown.dismissableViewColor = UIColor(white: 0, alpha: 0.6)
+        
 		// Will set a custom with instead of anchor view width
 		//		dropDown.width = 100
 		
 		// By default, the dropdown will have its origin on the top left corner of its anchor view
 		// So it will come over the anchor view and hide it completely
 		// If you want to have the dropdown underneath your anchor view, you can do this:
+        
+        
+        
 		chooseArticleDropDown.bottomOffset = CGPoint(x: 0, y: chooseArticleButton.bounds.height)
 		
+        
 		// You can also use localizationKeysDataSource instead. Check the docs.
 		chooseArticleDropDown.dataSource = [
 			"iPhone SE | Black | 64G",
